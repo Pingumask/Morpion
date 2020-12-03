@@ -1,6 +1,5 @@
 
 ```Algorithme Jeu de Morpion
-
 Variables   plateau : [][]
             caseVisee : []
             joueur ← "X" : caractere
@@ -20,10 +19,11 @@ Début
                 partieEnCours ← faux
         fSi
     TantQue partieEnCours
-Fin```
+Fin
 
 
-```Fonction PlateauPlein() : Booléen
+Fonction PlateauPlein() : Booléen
+Variables x, y : entiers
 Debut
     Pour y ← 0 à y < 3
         Pour x ← 0 à x < 3
@@ -33,10 +33,10 @@ Debut
         fPour
     fPour
     Retourner vrai
-Fin```
+Fin
 
 
-```Fonction Victoire() : Booléen
+Fonction Victoire() : Booléen
 Debut
 
 Fin```

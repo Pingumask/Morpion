@@ -38,14 +38,14 @@ Fin
 Fonction Victoire() : Booléen
 Debut
     //Vérification des lignes
-    Pour ligne ← 0 à ligne < 2
+    Pour ligne ← 0 à ligne < 3
         Si plateau[ligne][0] == plateau[ligne][1] ET plateau[ligne][1] == plateau[ligne][2] Alors
             gagnant ← plateau[ligne][0] , "remporte la partie"
             Retourner vrai
         fSi
     fPour
     //Vérification des colonnes
-    Pour colonne ← 0 à colonne < 2
+    Pour colonne ← 0 à colonne < 3
         Si plateau[0][colonne] == plateau[1][colonne] ET plateau[1][colonne] == plateau[2][colonne] Alors
             gagnant ← plateau[0][colonne] , "remporte la partie"
             Retourner vrai

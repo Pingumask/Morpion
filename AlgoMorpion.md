@@ -6,16 +6,18 @@ Variables   plateau : [][]
 Début
     Faire
         Lire(caseVisee)
-        plateau[caseVisee[0]][caseVisee[1]] ← joueur
-        Si joueur == "X" Alors
-            Alors
-                joueur ← "O"
-            Sinon
-                joueur ← "X"
-        fSi        
-        Si Victoire() OU PlateauPlein()
-            Alors
-                partieEnCours ← faux
+        Si plateau[caseVisee[0]][caseVisee[1]] == "" Alors
+            plateau[caseVisee[0]][caseVisee[1]] ← joueur
+            Si joueur == "X" Alors
+                Alors
+                    joueur ← "O"
+                Sinon
+                    joueur ← "X"
+            fSi        
+            Si Victoire() OU PlateauPlein()
+                Alors
+                    partieEnCours ← faux
+            fSi
         fSi
     TantQue partieEnCours
     Afficher(gagnant)

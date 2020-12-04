@@ -1,5 +1,7 @@
 const CELLULES = document.querySelectorAll("td");
 const PLAYER = document.querySelector("body");
+const GAMEOVER = document.querySelector("#gameOver");
+const WINNER = document.querySelector("#winner");
 let gagnant = "";
 
 function getCellule(x, y){
@@ -7,7 +9,8 @@ function getCellule(x, y){
 }
 
 function GameOver(){
-    alert(gagnant);
+    WINNER.innerText = gagnant;
+    GAMEOVER.classList.add("show");
 }
 
 function Victoire(){
@@ -33,6 +36,7 @@ function PlateauPlein(){
 
 CELLULES.forEach( cellule =>{
     cellule.addEventListener("click", () =>{
+        if(gagnant) return;
         if (!cellule.className){
             cellule.className=PLAYER.className;
             PLAYER.className == "X" ? PLAYER.className="O" : PLAYER.className="X";
@@ -43,3 +47,10 @@ CELLULES.forEach( cellule =>{
     });
 });
 
+document.querySelector("#gameOver button").addEventListener("click", ()=>{
+    CELLULES.forEach( cellule =>{
+        cellule.className="";
+    });
+    gagnant="";
+    GAMEOVER.classList.remove("show");
+})

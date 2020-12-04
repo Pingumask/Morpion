@@ -1,0 +1,32 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    background:gray;
+}
+
+td{
+    width:20vh;
+    height:20vh;
+    border:5px solid black;
+    border-radius:20px;
+    background:white;
+    background-size:contain;
+}
+
+body.X td{
+    cursor: url("cross.png"),crosshair;
+}
+
+body.O td{
+    cursor: url("circle.png"),pointer;
+}
+
+td.X{
+    background-image:url("cross.png");    
+}
+
+td.O{
+    background-image:url("circle.png");    
+}

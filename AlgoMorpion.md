@@ -14,9 +14,8 @@ Début
                 Sinon
                     joueur ← "X"
             fSi        
-            Si Victoire() OU PlateauPlein()
-                Alors
-                    partieEnCours ← faux
+            Si Victoire() OU PlateauPlein() Alors
+                partieEnCours ← faux
             fSi
         fSi
     TantQue partieEnCours

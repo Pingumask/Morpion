@@ -1,4 +1,3 @@
-
 ```Algorithme Jeu de Morpion
 Variables   plateau : [][]
             caseVisee : []
@@ -22,7 +21,6 @@ Début
     Afficher(gagnant)
 Fin
 
-
 Fonction PlateauPlein() : Booléen
 Variables x, y : entiers
 Debut
@@ -37,31 +35,30 @@ Debut
     Retourner vrai
 Fin
 
-
 Fonction Victoire() : Booléen
 Debut
     //Vérification des lignes
     Pour ligne ← 0 à ligne < 2
         Si plateau[ligne][0] == plateau[ligne][1] ET plateau[ligne][1] == plateau[ligne][2] Alors
-            gagnant ← plateau[ligne][0] & "remporte la partie"
+            gagnant ← plateau[ligne][0] , "remporte la partie"
             Retourner vrai
         fSi
     fPour
     //Vérification des colonnes
     Pour colonne ← 0 à colonne < 2
         Si plateau[0][colonne] == plateau[1][colonne] ET plateau[1][colonne] == plateau[2][colonne] Alors
-            gagnant ← plateau[0][colonne] & "remporte la partie"
+            gagnant ← plateau[0][colonne] , "remporte la partie"
             Retourner vrai
         fSi
     fPour
     //Vérification diagonale descendente
     Si plateau[0][0] == plateau[1][1] ET plateau[1][1] == plateau[2][2] Alors
-        gagnant ← plateau[1][1] & "remporte la partie"
+        gagnant ← plateau[1][1] , "remporte la partie"
         Retourner vrai
     fSi
     //Vérification diagonale montante
     Si plateau[2][0] == plateau[1][1] ET plateau[1][1] == plateau[0][2] Alors
-        gagnant ← plateau[1][1] & "remporte la partie"
+        gagnant ← plateau[1][1] , "remporte la partie"
         Retourner vrai
     fSi
     Retourner faux

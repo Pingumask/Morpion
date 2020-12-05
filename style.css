@@ -19,8 +19,8 @@ h1{
 }
 
 td{
-    width:20vh;
-    height:20vh;
+    width:22vh;
+    height:22vh;
     border:5px solid black;
     border-radius:20%;
     background:white;
@@ -67,7 +67,7 @@ td.O{
 
 button{
     font-size:5vh;
-    border-radius:15px;
+    border-radius:2vh;
     padding:5px 3vw;
     background: darkgreen;
     color:white;
@@ -81,8 +81,8 @@ footer{
 
 @media(orientation:portrait){
     td{
-        width:20vw;
-        height:20vw;
+        width:22vw;
+        height:22vw;
     }
 
     h1{

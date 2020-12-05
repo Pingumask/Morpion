@@ -22,7 +22,7 @@ td{
     width:20vh;
     height:20vh;
     border:5px solid black;
-    border-radius:20px;
+    border-radius:20%;
     background:white;
     background-size:contain;
 }
@@ -68,7 +68,7 @@ td.O{
 button{
     font-size:5vh;
     border-radius:15px;
-    padding:5px 30px;
+    padding:5px 3vw;
     background: darkgreen;
     color:white;
     border: 3px solid black;
@@ -76,4 +76,28 @@ button{
 
 footer{
     margin-top:5vh;
+    font-size:3vh;
+}
+
+@media(orientation:portrait){
+    td{
+        width:20vw;
+        height:20vw;
+    }
+
+    h1{
+        font-size:12vw;
+    }
+
+    footer{
+        font-size:3vw;
+    }
+
+    #gameOver{
+        font-size:10vw;
+    }
+
+    button{
+        font-size:5vw;
+    }
 }

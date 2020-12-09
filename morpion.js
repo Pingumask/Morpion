@@ -29,7 +29,7 @@ CELLULES.forEach( cellule =>{
             cellule.className=PLAYER.className;
             PLAYER.className == "X" ? PLAYER.className="O" : PLAYER.className="X";
             coups++;
-            if (coups<6) return;
+            if (coups<=5) return;
             gagnant = Victoire(cellule.getAttribute('ligne'),cellule.getAttribute('colonne'));
             if (gagnant=="" && coups==9) gagnant="Match nul";            
             if (gagnant) GameOver();   

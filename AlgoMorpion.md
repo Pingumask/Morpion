@@ -15,7 +15,7 @@ Début
                     joueur ← "X"
             fSi        
             coups ← coups +1
-            Si coups>6 Alors
+            Si coups>=5 Alors
                 Victoire(caseVisee[0],[caseVisee[1])
                 Si gagnant == "" && coups == 9 Alors
                     gagnant ← "Match Nul"

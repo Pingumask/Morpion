@@ -2,6 +2,7 @@
 Variables   plateau : [][]
             caseVisee : []
             joueur ← "X" , gagnant: chaine de caracteres
+            coups ← 0 : entier
 Début
     Faire
         Lire(caseVisee)
@@ -13,42 +14,28 @@ Début
                 Sinon
                     joueur ← "X"
             fSi        
-            Victoire()
-            Si gagnant == "" Alors
-                gagnant ← PlateauPlein()
+            coups ← coups +1
+            Si coups>6 Alors
+                Victoire(caseVisee[0],[caseVisee[1])
+                Si gagnant == "" && coups == 9 Alors
+                    gagnant ← "Match Nul"
+                fSi
             fSi
         fSi
     TantQue gagnant == ""
     Afficher(gagnant)
 Fin
 
-Fonction PlateauPlein() : Booléen
-Variables x, y : entiers
+Fonction Victoire(ligne,colonne) : Booléen
 Debut
-    Pour y ← 0 à y < 3
-        Pour x ← 0 à x < 3
-            Si tableau[x][y] != "O" ET tableau[x][y] != "X" Alors 
-                Retourner ""
-            fSi
-        fPour
-    fPour
-    Retourner Retourner "Match nul"
-Fin
-
-Fonction Victoire() : Booléen
-Debut
-    //Vérification des lignes
-    Pour ligne ← 0 à ligne < 3
-        Si plateau[ligne][0] == plateau[ligne][1] ET plateau[ligne][1] == plateau[ligne][2] ET plateau[ligne][1] != "" Alors
-            Retourner plateau[ligne][0] , "remporte la partie"
-        fSi
-    fPour
-    //Vérification des colonnes
-    Pour colonne ← 0 à colonne < 3
-        Si plateau[0][colonne] == plateau[1][colonne] ET plateau[1][colonne] == plateau[2][colonne] ET plateau[1][colonne] != "" Alors            
-            Retourner plateau[0][colonne] , "remporte la partie"
-        fSi
-    fPour
+    //Vérification de la ligne jouée
+    Si plateau[ligne][0] == plateau[ligne][1] ET plateau[ligne][1] == plateau[ligne][2] ET plateau[ligne][1] != "" Alors
+        Retourner plateau[ligne][0] , "remporte la partie"
+    fSi
+    //Vérification de la colonne jouée
+    Si plateau[0][colonne] == plateau[1][colonne] ET plateau[1][colonne] == plateau[2][colonne] ET plateau[1][colonne] != "" Alors            
+        Retourner plateau[0][colonne] , "remporte la partie"
+    fSi
     //Vérification diagonale descendente
     Si plateau[0][0] == plateau[1][1] ET plateau[1][1] == plateau[2][2] ET plateau[1][1] != "" Alors
         Retourner plateau[1][1] , "remporte la partie"

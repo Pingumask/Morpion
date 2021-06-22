@@ -28,19 +28,19 @@ td{
 }
 
 body.X td{
-    cursor: url("cross.png"),crosshair;
+    cursor: url("cross.svg"),crosshair;
 }
 
 body.O td{
-    cursor: url("circle.png"),pointer;
+    cursor: url("circle.svg"),pointer;
 }
 
 td.X{
-    background-image:url("cross.png");    
+    background-image:url("cross.svg");    
 }
 
 td.O{
-    background-image:url("circle.png");    
+    background-image:url("circle.svg");    
 }
 
 #gameOver{

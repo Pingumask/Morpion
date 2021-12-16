@@ -29,7 +29,7 @@ body{
     justify-content: center;
     flex-flow: column;
     height:100vh;
-    background:gray;
+    background:rgb(255, 0, 0);
     font-family: 'Roboto', sans-serif;
 }
 
